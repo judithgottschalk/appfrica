@@ -1,10 +1,13 @@
-{% if user_list %}
-    <ul>
-    {% for user in user_list %}
-        <li><a href="/elapp/{{ user.id }}/">{{ user.firstName}}</a>
-        </li>
-    {% endfor %}
-</ul>
-{% else %}
-    <p>No Users are available.</p>
-{% endif %}
+{% for user in user_list %}
+    {% load staticfiles %}
+    <img src="{% static  user.photoref %}" width="500" height="430"/>
+{% endfor %}
+
+<form action="{% url 'login'%}" method="post">
+{% for user in user_list %}
+    <label>password:
+        <input id=password name=password>
+    </label>    
+<input type="submit" value="Submit" />
+</form>
+{% endfor %}
