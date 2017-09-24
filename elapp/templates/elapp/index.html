@@ -1,0 +1,10 @@
+{% if user_list %}
+    <ul>
+    {% for user in user_list %}
+        <li><a href="/elapp/{{ user.id }}/">{{ user.firstName}}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>No Users are available.</p>
+{% endif %}
