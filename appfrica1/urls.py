@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^elapp/', include('elapp.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', include('elapp.urls')),
+    url(r'^login/', include('elapp.urls')),
+    url(r'^welcome/', include('elapp.urls')),
 ]

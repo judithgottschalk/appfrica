@@ -13,3 +13,11 @@ def login(request):
         'user_list' : user_list,
     }
     return HttpResponse(template.render(context, request))
+
+def welcome(request):
+    user_list = User.objects.all()
+    template = loader.get_template('elapp/welcome.html')
+    context = {
+        'user_list' : user_list,
+    }
+    return HttpResponse(template.render(context, request))

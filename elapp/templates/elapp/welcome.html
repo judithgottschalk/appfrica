@@ -1,0 +1,8 @@
+{% for user in user_list %}
+    {% load staticfiles %}
+    <a href="http://127.0.0.1:8000/elapp/login">
+    <img src="{% static  user.photoref %}" width="500" height="430"/>
+    </a>
+{% endfor %}
+
+
