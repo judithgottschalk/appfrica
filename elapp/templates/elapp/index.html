@@ -1,6 +1,7 @@
 {% for user in user_list %}
     {% load staticfiles %}
     <img src="{% static  user.photoref %}" width="500" height="430"/>
+    <p>{{user.photoref}}</p>
 {% endfor %}
 
 <form action="{% url 'login'%}" method="post">
